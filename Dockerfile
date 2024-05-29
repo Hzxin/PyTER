@@ -2,7 +2,7 @@ FROM marinelay/pypebugs:base
 
 USER root
 RUN mkdir /pyter && chmod 777 /pyter
-RUN apt-get install dos2unix build-essential python3-dev cython
+RUN apt-get install -y --no-install-recommends dos2unix build-essential python3-dev cython
 RUN pyenv install 3.9.1
 RUN pyenv global 3.9.1
 WORKDIR /pyter
